@@ -15,7 +15,7 @@ namespace Cryptonit.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Description page";
 
             return View();
         }
