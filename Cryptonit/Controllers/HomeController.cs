@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//HEJ TU JEST ZMIANA
+
 namespace Cryptonit.Controllers
 {
     public class HomeController : Controller
