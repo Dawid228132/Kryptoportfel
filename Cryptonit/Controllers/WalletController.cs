@@ -13,5 +13,13 @@ namespace Cryptonit.Controllers
         {
             return View();
         }
+        public ActionResult AddNewAddress()
+        {
+            return View();
+        }
+        public ActionResult MyAddresses()
+        {
+            return View();
+        }
     }
 }
