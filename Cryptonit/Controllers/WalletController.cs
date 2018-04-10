@@ -21,5 +21,10 @@ namespace Cryptonit.Controllers
         {
             return View();
         }
+
+        public ActionResult Send()
+        {
+            return View();
+        }
     }
 }
