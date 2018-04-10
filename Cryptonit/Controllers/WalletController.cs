@@ -29,7 +29,7 @@ namespace Cryptonit.Controllers
 
         public ActionResult History()
         {
-            return View()
+            return View();
         }
     }
 }
