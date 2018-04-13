@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+<h2>LoggedIn</h2>
+@if (@Session["UserID"]!=null)
+{
+<h4>@Session["UserID"] @Session["UserLogin"]</h4>
+}

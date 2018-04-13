@@ -34,3 +34,43 @@ C:\Users\Jarek\Desktop\VI Semestr\Web\Projekt\Cryptonit\Cryptonit.Tests\obj\Debu
 C:\Users\Jarek\Desktop\VI Semestr\Web\Projekt\Cryptonit\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.csproj.CopyComplete
 C:\Users\Jarek\Desktop\VI Semestr\Web\Projekt\Cryptonit\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.dll
 C:\Users\Jarek\Desktop\VI Semestr\Web\Projekt\Cryptonit\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.pdb
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\ApplicationInsights.config
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.Tests.dll.config
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.Tests.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.Tests.pdb
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\EntityFramework.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.pdb
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Cryptonit.dll.config
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\bin\Debug\EntityFramework.xml
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.csprojResolveAssemblyReference.cache
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.csproj.CoreCompileInputs.cache
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.dll
+C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit.Tests\obj\Debug\Cryptonit.Tests.pdb
