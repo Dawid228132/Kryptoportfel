@@ -6,8 +6,9 @@
     "\\Cryptonit\\Views",
     "\\Cryptonit\\Views\\Home",
     "\\Cryptonit\\Views\\Shared",
+    "\\Cryptonit\\Views\\User",
     "\\Cryptonit\\Views\\Wallet"
   ],
-  "SelectedNode": "\\Cryptonit",
+  "SelectedNode": "\\Cryptonit\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

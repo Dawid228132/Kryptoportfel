@@ -270,3 +270,7 @@ C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.csprojResolve
 C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.csproj.CoreCompileInputs.cache
 C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.dll
 C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.pdb
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\EntityFramework.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\EntityFramework.SqlServer.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\EntityFramework.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\EntityFramework.SqlServer.xml

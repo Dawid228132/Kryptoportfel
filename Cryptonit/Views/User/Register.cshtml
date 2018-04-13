@@ -1,0 +1,94 @@
+﻿@model Cryptonit.Models.Users
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Registration</h2>
+<div class="jumbotron">
+
+    <form name="register" method="post" action="Registration">
+        <table class="table">
+            <tr>
+                <td>
+                    <p>Name:</p>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.name, new
+    {
+        htmlAttributes = new
+        {
+            @class = "form-control"
+        }
+    })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Surname:</p>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.surname, new
+    {
+        htmlAttributes = new
+        {
+            @class = "form-control"
+        }
+    })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Email:</p>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.email, new
+    {
+        htmlAttributes = new
+        {
+            @class = "form-control"
+        }
+    })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Login:</p>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.login, new
+    {
+        htmlAttributes = new
+        {
+            @class = "form-control"
+        }
+    })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Password:</p>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.password, new
+    {
+        htmlAttributes = new
+        {
+            @class = "form-control"
+        }
+    })
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type = "submit"   value = "Create" class = "btn btn-success" / >
+                  
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+
