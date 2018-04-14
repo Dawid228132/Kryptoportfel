@@ -32,39 +32,85 @@ namespace Cryptonit.Controllers
             {
                 using (CryptonitEntities1 db = new CryptonitEntities1())
                 {
-                   
-                    db.Users.Add(user);
-                    db.SaveChanges();
+                    bool isEmail = IsEmailExist(user.email);
+                    bool isLogin = IsLoginExist(user.login);
+                    if(isLogin)
+                    {
+                        ModelState.AddModelError("LoginExist", "Login already exist.");
+                        return View(user);
+                    }
+                    if (isEmail)
+                    {
+                        ModelState.AddModelError("EmailExist", "Email already exist.");
+                        return View(user);
+                    }
+                    if (!isLogin&&!isEmail)
+                    {
+                        user.password = HashPassword.hash(user.password);
+                        user.confirmPassword= HashPassword.hash(user.confirmPassword);
+                        db.Users.Add(user);
+                        db.SaveChanges();
+                        ViewBag.Message = "success";
+                        
+                    }
                 }
                 ModelState.Clear();
-                ViewBag.Message = "Account successfully registered.";
+                
             }
             return View();
 
         }
-       
+       [NonAction]
+        public bool IsEmailExist(string email)
+        {
+  
+                    using (CryptonitEntities1 db = new CryptonitEntities1())
+                {
+                
+                    foreach(Users u in db.Users.ToArray())
+                    {
+                        if (u.email.Equals(email))
+                            return true;
+                    }
+
+                    return false;
+                }
+        }
+        public bool IsLoginExist(string login)
+        {
+            using (CryptonitEntities1 db = new CryptonitEntities1())
+            {
+                foreach (Users u in db.Users.ToArray())
+                {
+                    if (u.login.Equals(login))
+                        return true;
+                }
+                return false;
+            }
+        }
         public ActionResult Login()
         {
-
             return View();
         }
         [HttpPost]
         public ActionResult Login(Users user)
         {
-            using (CryptonitEntities1 db = new CryptonitEntities1())
-            {
-                var usr = db.Users.Single(u => u.login == user.login && u.password == user.password);
-                if(usr!=null)
+
+                using (CryptonitEntities1 db = new CryptonitEntities1())
                 {
-                    Session["UserID"] = usr.Id.ToString();
-                    Session["UserLogin"] = usr.login;
-                    return RedirectToAction("LoggedIn");
+                    user.password = HashPassword.hash(user.password);
+                    foreach (Users u in db.Users.ToArray())
+                    {
+                        if (u.login==user.login&& user.password==u.password)
+                        {
+                            Session["UserID"] = u.Id.ToString();
+                            Session["UserLogin"] = u.login;
+                            return RedirectToAction("LoggedIn");
+                        }
+                    }  
                 }
-                else
-                {
-                    ModelState.AddModelError("", "Login or Password is wrong.");
-                }
-            }
+
+            ModelState.AddModelError("LoginError", "Login or Password is wrong.");
             return View();
         }
         public ActionResult LoggedIn()

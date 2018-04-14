@@ -8,7 +8,7 @@
     <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="surname" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityContainer Name="CryptonitModelStoreContainer">
