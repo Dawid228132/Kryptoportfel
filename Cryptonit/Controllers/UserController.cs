@@ -14,7 +14,7 @@ namespace Cryptonit.Controllers
 
         public ActionResult Index()
         {
-            using (CryptonitEntities db = new CryptonitEntities())
+            using (CryptonitEntities1 db = new CryptonitEntities1())
             {
                 return View(db.Users.ToList());
             }
@@ -24,19 +24,15 @@ namespace Cryptonit.Controllers
         {
             return View();
         }
-        //[HttpGet]
-        //public ActionResult Registration()
-        //{
 
-        //    return View();
-        //}
         [HttpPost]
-        public ActionResult Register(Users user)
+        public ActionResult Register( Users user)
         {
            if(ModelState.IsValid)
             {
-                using (CryptonitEntities db = new CryptonitEntities())
+                using (CryptonitEntities1 db = new CryptonitEntities1())
                 {
+                   
                     db.Users.Add(user);
                     db.SaveChanges();
                 }
@@ -55,7 +51,7 @@ namespace Cryptonit.Controllers
         [HttpPost]
         public ActionResult Login(Users user)
         {
-            using (CryptonitEntities db = new CryptonitEntities())
+            using (CryptonitEntities1 db = new CryptonitEntities1())
             {
                 var usr = db.Users.Single(u => u.login == user.login && u.password == user.password);
                 if(usr!=null)

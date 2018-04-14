@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Cryptonit.Models.User>
+﻿@model IEnumerable<Cryptonit.Models.Users>
 
 @{
     ViewBag.Title = "Index";
@@ -24,9 +24,6 @@
             @Html.DisplayNameFor(model => model.password)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.confirmPassword)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.email)
         </th>
         <th></th>
@@ -45,9 +42,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.confirmPassword)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.email)
