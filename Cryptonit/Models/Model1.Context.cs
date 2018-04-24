@@ -13,10 +13,10 @@ namespace Cryptonit.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CryptonitEntities1 : DbContext
+    public partial class CryptonitEntities : DbContext
     {
-        public CryptonitEntities1()
-            : base("name=CryptonitEntities1")
+        public CryptonitEntities()
+            : base("name=CryptonitEntities")
         {
         }
     
@@ -25,6 +25,13 @@ namespace Cryptonit.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Address> Address { get; set; }
+        public virtual DbSet<Currency> Currency { get; set; }
+        public virtual DbSet<PublicKey> PublicKey { get; set; }
+        public virtual DbSet<Recipient> Recipient { get; set; }
+        public virtual DbSet<Signature> Signature { get; set; }
+        public virtual DbSet<Transaction> Transaction { get; set; }
+        public virtual DbSet<TransactionStatus> TransactionStatus { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

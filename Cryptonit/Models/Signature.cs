@@ -12,28 +12,18 @@ namespace Cryptonit.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Signature
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public Signature()
         {
             this.Address = new HashSet<Address>();
-            this.Transaction = new HashSet<Transaction>();
-            this.Currency = new HashSet<Currency>();
         }
     
         public int Id { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
-        public string email { get; set; }
+        public string HashCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Address> Address { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Transaction> Transaction { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Currency> Currency { get; set; }
     }
 }

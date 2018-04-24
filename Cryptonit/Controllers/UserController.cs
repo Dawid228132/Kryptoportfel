@@ -10,11 +10,11 @@ namespace Cryptonit.Controllers
 {
     public class UserController : Controller
     {
-
+        
 
         public ActionResult Index()
         {
-            using (CryptonitEntities1 db = new CryptonitEntities1())
+            using (CryptonitEntities db = new CryptonitEntities())
             {
                 return View(db.Users.ToList());
             }
@@ -30,7 +30,7 @@ namespace Cryptonit.Controllers
         {
            if(ModelState.IsValid)
             {
-                using (CryptonitEntities1 db = new CryptonitEntities1())
+                using (CryptonitEntities db = new CryptonitEntities())
                 {
                     bool isEmail = IsEmailExist(user.email);
                     bool isLogin = IsLoginExist(user.login);
@@ -64,7 +64,7 @@ namespace Cryptonit.Controllers
         public bool IsEmailExist(string email)
         {
   
-                    using (CryptonitEntities1 db = new CryptonitEntities1())
+                    using (CryptonitEntities db = new CryptonitEntities())
                 {
                 
                     foreach(Users u in db.Users.ToArray())
@@ -78,7 +78,7 @@ namespace Cryptonit.Controllers
         }
         public bool IsLoginExist(string login)
         {
-            using (CryptonitEntities1 db = new CryptonitEntities1())
+            using (CryptonitEntities db = new CryptonitEntities())
             {
                 foreach (Users u in db.Users.ToArray())
                 {
@@ -96,7 +96,7 @@ namespace Cryptonit.Controllers
         public ActionResult Login(Users user)
         {
 
-                using (CryptonitEntities1 db = new CryptonitEntities1())
+                using (CryptonitEntities db = new CryptonitEntities())
                 {
                     user.password = HashPassword.hash(user.password);
                     foreach (Users u in db.Users.ToArray())
