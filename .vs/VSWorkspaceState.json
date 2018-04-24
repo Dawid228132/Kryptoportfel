@@ -3,13 +3,14 @@
     "",
     "\\Cryptonit",
     "\\Cryptonit\\App_Data",
+    "\\Cryptonit\\App_Start",
     "\\Cryptonit\\Controllers",
+    "\\Cryptonit\\Models",
     "\\Cryptonit\\Views",
     "\\Cryptonit\\Views\\Home",
     "\\Cryptonit\\Views\\Shared",
-    "\\Cryptonit\\Views\\User",
-    "\\Cryptonit\\Views\\Wallet"
+    "\\Cryptonit\\Views\\User"
   ],
-  "SelectedNode": "\\Cryptonit\\App_Data\\CryptonitSQL.mdb",
+  "SelectedNode": "\\Cryptonit\\App_Data\\Cryptonit.mdf",
   "PreviewInSolutionExplorer": false
 }
