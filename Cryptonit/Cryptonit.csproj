@@ -181,11 +181,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\TestAPIController.cs" />
-=======
-    <Compile Include="Controllers\TestController.cs" />
->>>>>>> 0c361a5f21d7d96c8ef07bc7ae46b5bcfb6a7ef6
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UsersEntities.cs" />
     <Compile Include="Controllers\WalletController.cs" />
@@ -319,12 +315,8 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
+  <ItemGroup> 
     <Folder Include="Views\TestAPI\" />
-=======
-    <Folder Include="Views\Test\" />
->>>>>>> 0c361a5f21d7d96c8ef07bc7ae46b5bcfb6a7ef6
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
