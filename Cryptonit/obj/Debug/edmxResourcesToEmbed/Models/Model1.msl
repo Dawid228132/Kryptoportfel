@@ -1,71 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CryptonitModelStoreContainer" CdmEntityContainer="CryptonitEntities">
-    <EntitySetMapping Name="Address">
-      <EntityTypeMapping TypeName="CryptonitModel.Address">
-        <MappingFragment StoreEntitySet="Address">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
-          <ScalarProperty Name="PublicKeyId" ColumnName="PublicKeyId" />
-          <ScalarProperty Name="SignatureId" ColumnName="SignatureId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Currency">
-      <EntityTypeMapping TypeName="CryptonitModel.Currency">
-        <MappingFragment StoreEntitySet="Currency">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PublicKey">
-      <EntityTypeMapping TypeName="CryptonitModel.PublicKey">
-        <MappingFragment StoreEntitySet="PublicKey">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="HashCode" ColumnName="HashCode" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Recipient">
-      <EntityTypeMapping TypeName="CryptonitModel.Recipient">
-        <MappingFragment StoreEntitySet="Recipient">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
-          <ScalarProperty Name="PublicKeyId" ColumnName="PublicKeyId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Signature">
-      <EntityTypeMapping TypeName="CryptonitModel.Signature">
-        <MappingFragment StoreEntitySet="Signature">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="HashCode" ColumnName="HashCode" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Transaction">
-      <EntityTypeMapping TypeName="CryptonitModel.Transaction">
-        <MappingFragment StoreEntitySet="Transaction">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-          <ScalarProperty Name="TransactionStatusId" ColumnName="TransactionStatusId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TransactionStatus">
-      <EntityTypeMapping TypeName="CryptonitModel.TransactionStatus">
-        <MappingFragment StoreEntitySet="TransactionStatus">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="CryptonitModel.Users">
         <MappingFragment StoreEntitySet="Users">
@@ -78,13 +13,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="UserCurrency" TypeName="CryptonitModel.UserCurrency" StoreEntitySet="UserCurrency">
-      <EndProperty Name="Currency">
-        <ScalarProperty Name="Id" ColumnName="CurrencyId" />
-      </EndProperty>
-      <EndProperty Name="Users">
-        <ScalarProperty Name="Id" ColumnName="UserId" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
