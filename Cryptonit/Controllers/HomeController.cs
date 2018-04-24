@@ -11,6 +11,7 @@ namespace Cryptonit.Controllers
 {
     public class HomeController : Controller
     {
+        Blockcypher bc = new Blockcypher();
 
         public ActionResult Index()
         {
