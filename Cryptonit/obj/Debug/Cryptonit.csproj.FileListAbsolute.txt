@@ -368,6 +368,7 @@ C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.cspr
 C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.csproj.CoreCompileInputs.cache
 C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.dll
 C:\Users\micha\Desktop\Projekty\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.pdb
+<<<<<<< HEAD
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\bin\ApplicationInsights.config
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\bin\Cryptonit.dll.config
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\bin\Cryptonit.dll
@@ -480,3 +481,22 @@ C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\obj\Debug\Crypt
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.csproj.CopyComplete
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.dll
 C:\Users\Ярослав\Documents\GitHub\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.pdb
+=======
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\BlockCypher.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\crypto.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.IO.FileSystem.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.Net.Http.Extensions.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.Net.Http.Primitives.dll
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\crypto.pdb
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\crypto.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.Net.Http.Extensions.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\bin\System.Net.Http.Primitives.xml
+C:\Users\micha\Desktop\Kryptoportfel\Cryptonit\obj\Debug\Cryptonit.csproj.App.config
+>>>>>>> 0c361a5f21d7d96c8ef07bc7ae46b5bcfb6a7ef6
