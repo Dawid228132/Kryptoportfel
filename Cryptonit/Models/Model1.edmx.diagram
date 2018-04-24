@@ -24,6 +24,10 @@
         <AssociationConnector Association="CryptonitModel.FK__Transacti__UserI__02084FDA" ManuallyRouted="false" />
         <AssociationConnector Association="CryptonitModel.UserCurrency" ManuallyRouted="false" />
         <AssociationConnector Association="CryptonitModel.FK__Address__Signatu__14270015" />
+        <EntityTypeShape EntityType="CryptonitModel.UserContact" Width="1.5" PointX="8" PointY="0.5" />
+        <AssociationConnector Association="CryptonitModel.FK__UserConta__Curre__3C34F16F" />
+        <AssociationConnector Association="CryptonitModel.FK__UserConta__Publi__3A4CA8FD" />
+        <AssociationConnector Association="CryptonitModel.FK__UserConta__UserI__3B40CD36" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

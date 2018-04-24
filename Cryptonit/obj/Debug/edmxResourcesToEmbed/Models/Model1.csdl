@@ -27,6 +27,7 @@
     <NavigationProperty Name="Address1" Relationship="Self.FK__Address__Currenc__7E37BEF6" FromRole="Currency" ToRole="Address" />
     <NavigationProperty Name="Recipient" Relationship="Self.FK__Recipient__Curre__74AE54BC" FromRole="Currency" ToRole="Recipient" />
     <NavigationProperty Name="Users" Relationship="Self.UserCurrency" FromRole="Currency" ToRole="Users" />
+    <NavigationProperty Name="UserContact" Relationship="CryptonitModel.FK__UserConta__Curre__3C34F16F" FromRole="Currency" ToRole="UserContact" />
   </EntityType>
   <EntityType Name="PublicKey">
     <Key>
@@ -37,6 +38,7 @@
     <NavigationProperty Name="Address" Relationship="Self.FK__Address__PublicK__7D439ABD" FromRole="PublicKey" ToRole="Address" />
     <NavigationProperty Name="Address1" Relationship="Self.FK__Address__PublicK__7F2BE32F" FromRole="PublicKey" ToRole="Address" />
     <NavigationProperty Name="Recipient" Relationship="Self.FK__Recipient__Publi__75A278F5" FromRole="PublicKey" ToRole="Recipient" />
+    <NavigationProperty Name="UserContact" Relationship="CryptonitModel.FK__UserConta__Publi__3A4CA8FD" FromRole="PublicKey" ToRole="UserContact" />
   </EntityType>
   <EntityType Name="Recipient">
     <Key>
@@ -90,6 +92,8 @@
     <NavigationProperty Name="Address" Relationship="Self.FK__Address__UserId__7B5B524B" FromRole="Users" ToRole="Address" />
     <NavigationProperty Name="Transaction" Relationship="Self.FK__Transacti__UserI__02084FDA" FromRole="Users" ToRole="Transaction" />
     <NavigationProperty Name="Currency" Relationship="Self.UserCurrency" FromRole="Users" ToRole="Currency" />
+    <Property Name="salt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserContact" Relationship="CryptonitModel.FK__UserConta__UserI__3B40CD36" FromRole="Users" ToRole="UserContact" />
   </EntityType>
   <Association Name="FK__Address__Currenc__7C4F7684">
     <End Role="Currency" Type="Self.Currency" Multiplicity="1" />
@@ -256,6 +260,19 @@
       <End Role="Signature" EntitySet="Signature" />
       <End Role="Address" EntitySet="Address" />
     </AssociationSet>
+    <EntitySet Name="UserContact" EntityType="CryptonitModel.UserContact" />
+    <AssociationSet Name="FK__UserConta__Curre__3C34F16F" Association="CryptonitModel.FK__UserConta__Curre__3C34F16F">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="UserContact" EntitySet="UserContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserConta__Publi__3A4CA8FD" Association="CryptonitModel.FK__UserConta__Publi__3A4CA8FD">
+      <End Role="PublicKey" EntitySet="PublicKey" />
+      <End Role="UserContact" EntitySet="UserContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserConta__UserI__3B40CD36" Association="CryptonitModel.FK__UserConta__UserI__3B40CD36">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserContact" EntitySet="UserContact" />
+    </AssociationSet>
   </EntityContainer>
   <Association Name="FK__Address__Signatu__14270015">
     <End Type="CryptonitModel.Signature" Role="Signature" Multiplicity="1" />
@@ -266,6 +283,56 @@
       </Principal>
       <Dependent Role="Address">
         <PropertyRef Name="SignatureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ContactAddress" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyId" Type="Int32" Nullable="false" />
+    <Property Name="ContactName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="PublicKeyId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Currency" Relationship="CryptonitModel.FK__UserConta__Curre__3C34F16F" FromRole="UserContact" ToRole="Currency" />
+    <NavigationProperty Name="PublicKey" Relationship="CryptonitModel.FK__UserConta__Publi__3A4CA8FD" FromRole="UserContact" ToRole="PublicKey" />
+    <NavigationProperty Name="Users" Relationship="CryptonitModel.FK__UserConta__UserI__3B40CD36" FromRole="UserContact" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK__UserConta__Curre__3C34F16F">
+    <End Type="CryptonitModel.Currency" Role="Currency" Multiplicity="1" />
+    <End Type="CryptonitModel.UserContact" Role="UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserConta__Publi__3A4CA8FD">
+    <End Type="CryptonitModel.PublicKey" Role="PublicKey" Multiplicity="1" />
+    <End Type="CryptonitModel.UserContact" Role="UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublicKey">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="PublicKeyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserConta__UserI__3B40CD36">
+    <End Type="CryptonitModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="CryptonitModel.UserContact" Role="UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

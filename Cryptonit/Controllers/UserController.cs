@@ -46,8 +46,10 @@ namespace Cryptonit.Controllers
                     }
                     if (!isLogin&&!isEmail)
                     {
-                        user.password = HashPassword.hash(user.password);
-                        user.confirmPassword= HashPassword.hash(user.confirmPassword);
+                        user.salt = HashPassword.createSalt();
+                       
+                        user.password = HashPassword.hash(user.password,user.salt);
+                        user.confirmPassword= HashPassword.hash(user.confirmPassword,user.salt);
                         db.Users.Add(user);
                         db.SaveChanges();
                         ViewBag.Message = "success";
@@ -98,10 +100,10 @@ namespace Cryptonit.Controllers
 
                 using (CryptonitEntities db = new CryptonitEntities())
                 {
-                    user.password = HashPassword.hash(user.password);
+                    //user.password = HashPassword.hash(user.password);
                     foreach (Users u in db.Users.ToArray())
                     {
-                        if (u.login==user.login&& user.password==u.password)
+                        if (u.login==user.login&& HashPassword.hash(user.password,u.salt)==u.password)
                         {
                             Session["UserID"] = u.Id.ToString();
                             Session["UserLogin"] = u.login;

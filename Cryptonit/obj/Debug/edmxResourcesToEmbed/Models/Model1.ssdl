@@ -58,6 +58,17 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="UserContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ContactAddress" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="PublicKeyId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="UserCurrency">
     <Key>
       <PropertyRef Name="UserId" />
@@ -76,6 +87,7 @@
     <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="nvarchar(max)" Nullable="false" />
     <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="salt" Type="varchar" MaxLength="25" />
   </EntityType>
   <Association Name="FK__Address__Currenc__7C4F7684">
     <End Role="Currency" Type="Self.Currency" Multiplicity="1" />
@@ -197,6 +209,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__UserConta__Curre__3C34F16F">
+    <End Role="Currency" Type="Self.Currency" Multiplicity="1" />
+    <End Role="UserContact" Type="Self.UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="CurrencyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserConta__Publi__3A4CA8FD">
+    <End Role="PublicKey" Type="Self.PublicKey" Multiplicity="1" />
+    <End Role="UserContact" Type="Self.UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublicKey">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="PublicKeyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserConta__UserI__3B40CD36">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserContact" Type="Self.UserContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserContact">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__UserCurre__Curre__05D8E0BE">
     <End Role="Currency" Type="Self.Currency" Multiplicity="1" />
     <End Role="UserCurrency" Type="Self.UserCurrency" Multiplicity="*" />
@@ -229,6 +277,7 @@
     <EntitySet Name="Signature" EntityType="Self.Signature" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TransactionStatus" EntityType="Self.TransactionStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserContact" EntityType="Self.UserContact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserCurrency" EntityType="Self.UserCurrency" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Address__Currenc__7C4F7684" Association="Self.FK__Address__Currenc__7C4F7684">
@@ -270,6 +319,18 @@
     <AssociationSet Name="FK__Transacti__UserI__02084FDA" Association="Self.FK__Transacti__UserI__02084FDA">
       <End Role="Users" EntitySet="Users" />
       <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserConta__Curre__3C34F16F" Association="Self.FK__UserConta__Curre__3C34F16F">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="UserContact" EntitySet="UserContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserConta__Publi__3A4CA8FD" Association="Self.FK__UserConta__Publi__3A4CA8FD">
+      <End Role="PublicKey" EntitySet="PublicKey" />
+      <End Role="UserContact" EntitySet="UserContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserConta__UserI__3B40CD36" Association="Self.FK__UserConta__UserI__3B40CD36">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserContact" EntitySet="UserContact" />
     </AssociationSet>
     <AssociationSet Name="FK__UserCurre__Curre__05D8E0BE" Association="Self.FK__UserCurre__Curre__05D8E0BE">
       <End Role="Currency" EntitySet="Currency" />

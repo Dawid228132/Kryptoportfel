@@ -226,6 +226,9 @@
     <Compile Include="Models\TransactionStatus.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -233,7 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Cryptonit.mdf" />
-    <Content Include="App_Data\CryptonitSQL.mdb" />
     <Content Include="App_Data\Cryptonit_log.ldf">
       <DependentUpon>Cryptonit.mdf</DependentUpon>
     </Content>

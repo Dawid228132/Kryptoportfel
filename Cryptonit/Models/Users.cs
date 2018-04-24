@@ -20,6 +20,7 @@ namespace Cryptonit.Models
             this.Address = new HashSet<Address>();
             this.Transaction = new HashSet<Transaction>();
             this.Currency = new HashSet<Currency>();
+            this.UserContact = new HashSet<UserContact>();
         }
     
         public int Id { get; set; }
@@ -28,6 +29,7 @@ namespace Cryptonit.Models
         public string login { get; set; }
         public string password { get; set; }
         public string email { get; set; }
+        public string salt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Address> Address { get; set; }
@@ -35,5 +37,7 @@ namespace Cryptonit.Models
         public virtual ICollection<Transaction> Transaction { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Currency> Currency { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserContact> UserContact { get; set; }
     }
 }

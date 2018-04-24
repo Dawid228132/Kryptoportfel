@@ -33,5 +33,6 @@ namespace Cryptonit.Models
         public virtual DbSet<Transaction> Transaction { get; set; }
         public virtual DbSet<TransactionStatus> TransactionStatus { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<UserContact> UserContact { get; set; }
     }
 }

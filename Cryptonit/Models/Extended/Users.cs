@@ -42,5 +42,7 @@ namespace Cryptonit.Models
         [Required(ErrorMessage = "Email is required!")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Email address is not correct.")]
         public string email { get; set; }
+
+        public string salt { get; set; }
     }
 }

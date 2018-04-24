@@ -21,6 +21,7 @@ namespace Cryptonit.Models
             this.Address1 = new HashSet<Address>();
             this.Recipient = new HashSet<Recipient>();
             this.Users = new HashSet<Users>();
+            this.UserContact = new HashSet<UserContact>();
         }
     
         public int Id { get; set; }
@@ -35,5 +36,7 @@ namespace Cryptonit.Models
         public virtual ICollection<Recipient> Recipient { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Users> Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserContact> UserContact { get; set; }
     }
 }

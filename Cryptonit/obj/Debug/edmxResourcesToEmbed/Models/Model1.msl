@@ -69,6 +69,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="CryptonitModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="salt" ColumnName="salt" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="surname" ColumnName="surname" />
@@ -86,5 +87,17 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="UserContact">
+      <EntityTypeMapping TypeName="CryptonitModel.UserContact">
+        <MappingFragment StoreEntitySet="UserContact">
+          <ScalarProperty Name="PublicKeyId" ColumnName="PublicKeyId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="ContactAddress" ColumnName="ContactAddress" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
